@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Expense Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Expense Tracker</h2>
+    <section class="summary">
+      <div><span class="summary-icon">💰</span><h4>Balance</h4><p id="balance">₹0.00</p></div>
+      <div><span class="summary-icon">⬆️</span><h4>Income</h4><p id="income">₹0.00</p></div>
+      <div><span class="summary-icon">⬇️</span><h4>Expense</h4><p id="expense">₹0.00</p></div>
+    </section>
+    <section class="add-transaction card">
+      <h3>Add Transaction</h3>
+      <form id="transaction-form" autocomplete="off">
+        <input type="text" id="text" placeholder="Description" required>
+        <input type="number" id="amount" placeholder="Amount (use '-' for expense)" required>
+        <select id="category" required>
+          <option value="">Category</option>
+          <option value="salary">Salary</option>
+          <option value="food">Food</option>
+          <option value="rent">Rent</option>
+          <option value="travel">Travel</option>
+          <option value="others">Others</option>
+        </select>
+        <button type="submit" id="add-btn">Add</button>
+      </form>
+    </section>
+    <section class="transactions card">
+      <h3>History</h3>
+      <ul id="transactions"></ul>
+    </section>
+    <section class="charts card">
+      <h3>Trends</h3>
+      <canvas id="pieChart"></canvas>
+      <canvas id="barChart"></canvas>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+body {
+  background: linear-gradient(135deg, #f3e7e9 0%, #e3eeff 100%);
+  color: #243379;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 30px 60px 30px;
+  background: rgba(255,255,255,0.93);
+  box-shadow: 0 0 32px rgba(100, 100, 160, 0.11);
+  border-radius: 16px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #263570;
+  font-size: 2.3rem;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 16px 0;
+  gap: 22px;
+}
+
+.summary div {
+  flex: 1;
+  background: linear-gradient(120deg, #a7bfff 0%, #f3e7e9 100%);
+  color: #3a425c;
+  box-shadow: 0 4px 14px rgba(120,150,255,0.07);
+  border-radius: 12px;
+  text-align: center;
+  padding: 18px 8px 14px 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.summary div:hover {
+  background: linear-gradient(120deg, #f9d423 0%, #ff4e50 100%);
+  color: #fff;
+}
+
+.summary-icon {
+  font-size: 2.2rem;
+  color: #4d7cff;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.card {
+  background: rgba(160, 192, 255, 0.12);
+  margin: 32px 0 0 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(120,150,255,0.04);
+  padding: 24px 22px;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 13px;
+  border-radius: 8px;
+  border: 1.5px solid #b1c5e6;
+  font-size: 1.15em;
+  background: rgba(200, 215, 255, 0.22);
+  color: #243379;
+  outline: none;
+  transition: all 0.3s;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #a7bfff;
+}
+
+form button {
+  background: linear-gradient(90deg, #43cea2 20%, #185a9d 100%);
+  color: white;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 2px 8px rgba(67,206,162,0.10);
+}
+
+form button:hover {
+  background: linear-gradient(90deg, #f9d423 0%, #ff4e50 85%);
+}
+
+.transactions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transactions li {
+  background: rgba(160, 192, 255, 0.15);
+  border-left: 6px solid #687bdf;
+  color: #3a425c;
+  margin-bottom: 8px;
+  padding: 13px 18px 12px 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.24s;
+  font-size: 1.08em;
+}
+
+.transactions li.income {
+  border-left: 6px solid #28a745;
+  background: rgba(204, 255, 204, 0.17);
+}
+.transactions li.expense {
+  border-left: 6px solid #e74c3c;
+  background: rgba(255, 197, 197, 0.17);
+}
+.transactions li:hover {
+  background: #f9d42333;
+}
+
+.transactions .edit-btn, .transactions .delete-btn {
+  border: none;
+  padding: 3px 7px;
+  margin-left: 3px;
+  border-radius: 6px;
+  background: rgba(215, 215, 255, 0.13);
+  color: #243379;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.transactions .edit-btn:hover {
+  background: #4d7cff33;
+}
+.transactions .delete-btn:hover {
+  background: #ff4e501f;
+  color: #fff;
+}
+
+canvas {
+  width: 100% !important;
+  max-width: 800px;
+  height: auto !important;
+  margin: 16px auto 0 auto;
+  display: block;
+  background-color: rgba(215, 230, 255, 0.33);
+  border-radius: 9px;
+  padding: 10px;
+}
+
+
+body {
+  background: linear-gradient(120deg, #a7bfff, #f3e7e9, #f9d423, #ff4e50);
+  background-size: 400% 400%;
+  animation: moving-gradient 16s linear infinite;
+  position: relative;
+  min-height: 100vh;
+}
+@keyframes moving-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.floating-sphere {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff7, rgba(130,180,255,0.28) 70%);
+  box-shadow: 0 2px 24px rgba(60,80,120,0.07);
+  width: 110px; height: 110px; left: 10vw; top: 60vh;
+  animation: floatY 12s ease-in-out infinite;
+}
+@keyframes floatY {
+  0%,100% { transform: translateY(0) scale(1); }
+  65% { transform: translateY(-60px) scale(1.07); }
+}
