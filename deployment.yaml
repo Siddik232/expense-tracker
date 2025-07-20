@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expense-deployment
+  namespace: expense-prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: expense-tracker
+  template:
+    metadata:
+      labels:
+        app: expense-tracker
+    spec:
+      containers:
+        - name: expense-tracker
+          image: siddik232:v1
+          ports:
+            - containerPort: 80
