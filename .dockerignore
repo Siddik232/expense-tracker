@@ -1,0 +1,10 @@
+node_modules
+.git
+.github
+.gitignore
+minikube-installer.exe
+*.md
+docker-compose.yaml
+compose.yaml
+.prettierrc
+.eslintrc.json
